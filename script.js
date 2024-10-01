@@ -11,7 +11,7 @@ const WIN_COMBOS = [
   [2, 4, 6],
 ];
 const cells = document.querySelectorAll("[data-cell]"),
-  board = document.getElementById("board"),
+  board = document.getElementById("t-board"),
   message = document.getElementById("message"),
   msgText = document.querySelector(".w-message"),
   restartBtn = document.getElementById("restart-button");
@@ -24,7 +24,9 @@ const startGame = () => {
     cell.onclick = handleClick;
   });
   setHover();
-  message.style.display = "none";
+  console.log(msgText);
+  msgText.innerHTML = ""; // Hide the message block
+  console.log(msgText);
 };
 
 const handleClick = (e) => {
